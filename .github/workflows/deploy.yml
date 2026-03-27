@@ -1,5 +1,6 @@
 name: Deploy Oriental Oracle to Pages
 
+# This workflow builds and deploys the React app to GitHub Pages
 on:
   push:
     branches:
