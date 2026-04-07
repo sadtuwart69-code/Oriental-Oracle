@@ -637,7 +637,21 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-6 md:p-12 overflow-x-hidden">
+    <div className="min-h-screen flex flex-col items-center pt-16 pb-6 px-6 md:pt-24 md:pb-12 md:px-12 overflow-x-hidden">
+      {/* Promotional Banner */}
+      <motion.a
+        href="https://iching-oracle.carrd.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="fixed top-0 left-0 right-0 z-[100] bg-[#D4AF37] text-black py-2 px-4 text-center font-bold text-xs md:text-sm tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-[#e5c158] transition-all shadow-[0_4px_20px_rgba(212,175,55,0.3)]"
+      >
+        <Sparkles className="w-4 h-4 animate-pulse" />
+        Unlock Your Ultimate Destiny: Experience the Full Master Oracle
+        <ArrowRight className="w-4 h-4" />
+      </motion.a>
+
       {/* Background Atmosphere */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#3a1510] blur-[120px] opacity-20 rounded-full" />
@@ -663,6 +677,15 @@ export default function App() {
             {item.label}
           </button>
         ))}
+        <a
+          href="https://iching-oracle.carrd.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] hover:text-white transition-all border border-[#D4AF37]/30 px-3 py-1 rounded-full"
+        >
+          <Sparkles className="w-3 h-3" />
+          Master Oracle
+        </a>
       </nav>
 
       <main className="relative z-10 w-full max-w-4xl flex flex-col items-center">
@@ -765,10 +788,10 @@ export default function App() {
 
                     <div className="flex justify-center mb-12">
                       <button 
-                        onClick={() => window.open('https://easternoracle.gumroad.com/l/oracle29', '_blank')}
+                        onClick={() => window.open('https://iching-oracle.carrd.co/', '_blank')}
                         className="px-8 py-4 bg-transparent border border-[#D4AF37] text-[#D4AF37] text-xs uppercase tracking-[0.2em] hover:bg-[#D4AF37] hover:text-black transition-all font-sans font-bold"
                       >
-                        Unlock Deep Destiny Blueprint
+                        Unlock Your Full Destiny Blueprint
                       </button>
                     </div>
                   </motion.div>
@@ -802,7 +825,15 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        <footer className="mt-24 mb-12 text-center">
+        <footer className="mt-24 mb-12 text-center flex flex-col items-center gap-6">
+          <a 
+            href="https://iching-oracle.carrd.co/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#D4AF37] hover:text-white transition-all text-sm font-serif italic tracking-widest border-b border-[#D4AF37]/30 pb-1"
+          >
+            Explore the Full Master Oracle System
+          </a>
           <p className="text-[9px] uppercase tracking-[0.5em] text-white/20">
             © 2026 Oriental Oracle System • Built for the Modern Seeker
           </p>
